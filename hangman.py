@@ -1,4 +1,4 @@
-import random, sys
+import random
 
 HANGMAN_PICS = [r"""
  +--+
@@ -76,7 +76,7 @@ def main():
 
 def take_input():
     print(" ".join(placeholder))
-    letter = input("Guess a Letter: ")
+    letter = (input("Guess a Letter: ")).upper()
     return letter
 
 def check_letter(letter):
@@ -84,8 +84,11 @@ def check_letter(letter):
         for i in range(len(result)):
             if letter == result[i]:
                 placeholder[i] = letter
-    if not letter in result:
-        missed_letters.append(letter)
+    elif not letter in result:
+        if letter in missed_letters:
+            print("You already entered this letter! Try again!")
+        else:
+            missed_letters.append(letter)
 
 def check_win_or_loss():
     # check Win
