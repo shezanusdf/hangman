@@ -72,14 +72,15 @@ missed_letters = []
 
 def main():
     while True:
-        print(HANGMAN_PICS[len(missed_letters)])
-        print("The category is:",CATEGORY)
-        print("Missed Letters:", " ".join(missed_letters))
-        x = take_input()
-        check_letter(x)
-        if check_win_or_loss():
-            break
-        if KeyboardInterrupt:
+        try:
+            print(HANGMAN_PICS[len(missed_letters)])
+            print("The category is:",CATEGORY)
+            print("Missed Letters:", " ".join(missed_letters))
+            x = take_input()
+            check_letter(x)
+            if check_win_or_loss():
+                break
+        except KeyboardInterrupt:
             print("Program Closing...")
             break
 
