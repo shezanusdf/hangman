@@ -79,6 +79,9 @@ def main():
         check_letter(x)
         if check_win_or_loss():
             break
+        if KeyboardInterrupt:
+            print("Program Closing...")
+            break
 
 
 def take_input():
