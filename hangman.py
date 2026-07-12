@@ -58,16 +58,22 @@ r"""
 ====="""
 ]
 
-BIRDS = ["EAGLE", "PIGEON", "VULTURE", "SPARROW", "CROW","HUMMINGBIRD","PARROT","EMU","OSTRICH"]
-ANIMALS = []
-result = BIRDS[random.randint(0,(len(BIRDS) - 1))]
+CATEGORIES = {
+    "BIRDS" : ["EAGLE", "PIGEON", "VULTURE", "SPARROW", "CROW","HUMMINGBIRD","PARROT","EMU","OSTRICH"],
+    "ANIMALS" : ["ELEPHANT","GIRAFFE","RHINO","TIGER","PENGUIN","BEAR","CAT","DOG","FOX"],
+    "COUNTRIES" : ["INDIA","AUSTRALIA","BRAZIL","CUBA","MEXICO","GERMANY","AUSTRIA","LUXEMBOURG"],
+    "FRUITS" : ["APPLE","BANANA","ORANGE","MANGO","LITCHI","KIWI","STRAWBERRY","BLUEBERRY"],
+    "COLORS" : ["VIOLET","INDIGO","GREEN","PURPLE","BLACK","MAROON","ORANGE","YELLOW"]
+}
+CATEGORY = random.choice(list(CATEGORIES.keys()))
+result = random.choice(CATEGORIES[CATEGORY])
 placeholder = ["_"] * len(result)
 missed_letters = []
 
 def main():
     while True:
         print(HANGMAN_PICS[len(missed_letters)])
-        print("The category is: Birds")
+        print("The category is:",CATEGORY)
         print("Missed Letters:", " ".join(missed_letters))
         x = take_input()
         check_letter(x)
