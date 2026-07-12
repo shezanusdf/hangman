@@ -3,7 +3,7 @@
 Hangman is a simple terminal based quiz game. 
 Guess the word before the complete image of the hangman is formed.
 
-![Hangman](image.png)
+<img width="252" height="882" alt="image" src="https://github.com/user-attachments/assets/857803c2-629f-4a90-b155-2f51674017db" />
 
 ## Features
 
