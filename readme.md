@@ -1,6 +1,9 @@
 # Hangman
 
-Hangman is a simple terminal based quiz game where the player has to guess the word before the complete image of the hangman is formed.
+Hangman is a simple terminal based quiz game. 
+Guess the word before the complete image of the hangman is formed.
+
+![Hangman](image.png)
 
 ## Features
 
