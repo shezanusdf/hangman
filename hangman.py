@@ -59,6 +59,7 @@ r"""
 ]
 
 BIRDS = ["EAGLE", "PIGEON", "VULTURE", "SPARROW", "CROW","HUMMINGBIRD","PARROT","EMU","OSTRICH"]
+ANIMALS = []
 result = BIRDS[random.randint(0,(len(BIRDS) - 1))]
 placeholder = ["_"] * len(result)
 missed_letters = []
